@@ -1,28 +1,17 @@
-# PruebaTecnica
+# Prueba técnica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+## Elaborar un CRUD de usuarios en donde se solicita: ID, Nombre completo, Fecha de cumpleaños, calcular edad, foto y dirección.
 
-## Development server
+### ¿Que se elaboro?
+El proyecto no fue terminado en tiempo adecuado debido a que tuve problemas con mi angular (no me detectaba el cambio de rutas ni el HTML que escribia) por ende, perdi mucho tiempo buscando una solucion, creando proyectos y demas, por eso mismo la creacion del proyecto no cuadra con el tiempo en que se me dijo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#### HTML
+Para la estructuración del HTML decidi manejar un menu de 2 botones, uno que invocara la seccion derecha1 (que es registro) y otro que activara seccion derecha2 (que es listar). De este modo nos ahorramos componentes y podemos trabajar con la el array que se nos permitio usar. Despues de todo, se valia. Ya que no se obligo usar Excel o un framework back para un back ligero.
 
-## Code scaffolding
+Habia otra alternativa, crear mas componentes, sin embargo seria complicarse un poco mas ya que tendriamos que ingeniar manera de enviar el array mediante un JSON, lo cual... Simplemente me aventure a hacerlo de la manera, en el mismo componente y solamente alternar entre los menus usando el mismo arreglo.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### CSS
+Para el estilo solamente opte por tonos azules, lamentablemente no pude recrear en su totalidad lo que tenia en mente, por lo mismo... perdi demasiado tiempo.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# frontevtecjaime
+#### Componentes
+Para obtener los datos de los inputs unicamente use el form module que nos brinda angular, de esta manera enlazamos los inputs, obtenemos datos y los guardamos en el arreglo. Bastante sencillo el proceso, no obstante se perdio mucho tiempo en el retraso comentado. 
