@@ -13,7 +13,8 @@
                 <div class="conjuntos">
                     <input type="text" placeholder="Dirección" class="input nombre" [(ngModel)]="direccion"> <br>
                     <input type="date" class="input" [(ngModel)]="fechaNacimiento">
-                    <input type="file" placeholder="Cargar foto" class="input bsimg" [(ngModel)]="foto">
+                    <input type="file" class="input bsimg" [(ngModel)]="imagenBase64" (change)="cargarImagen($event)">
+
 
                 </div>
                 <button class="registrar" (click)="registrarUsuario()">Confirmar</button>
@@ -29,7 +30,7 @@
                     <img [src]="usuario.foto" class="foto">
                     <div class="informacion">
                         <h2>{{ usuario.nombreCompleto }}</h2>
-                        <h2>Edad</h2>
+                        <h2>{{usuario.edad}}</h2>
                         <h2>{{ usuario.fechaNacimiento | date:'dd/MM/yyyy' }}</h2>
                         <h2>{{ usuario.direccion }}</h2>
                     </div>
