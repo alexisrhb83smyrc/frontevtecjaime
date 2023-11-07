@@ -1,0 +1,143 @@
+.general {
+    background-color: #112A3D;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.texto1 {
+    color: white;
+    font-size: 1rem;
+    padding-top: 1rem;
+    margin-left: 1rem;
+}
+
+.adelgazar {
+    font-weight: lighter;
+}
+
+.izquierda {
+    width: 246px;
+    height: 473px;
+    border: 1px solid #0E2333;
+    background: #112A3D;
+    margin-left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.izquierda button {
+    height: 50%;
+    background: #17364E;
+    color: white;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.bi {
+    font-size: 4rem;
+}
+
+.espacio {
+    display: grid;
+    grid-template-columns: 25% auto;
+    height: 100vh;
+}
+
+.texto2 {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+
+.contenedorForm {
+    width: 90%;
+    height: 70%;
+    background: #17364E;
+}
+
+.input {
+    border-radius: 5px;
+    background: #1D2D39;
+    color: white;
+    border: none;
+    margin: 1rem;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.nombre {
+    width: 95%;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.bsimg {
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+
+.registrar {
+    background-color: #0E2333;
+    border: none;
+    font-size: 1.3rem;
+    font-family: Poppins;
+    color: white;
+
+    padding: 10px;
+    border: 1px solid white;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    transition: all ease .2s;
+    cursor: pointer;
+}
+
+.registrar:hover {
+    transform: translateY(-10px);
+}
+
+
+.foto {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.card {
+    background: #1D2D39;
+    margin: 1rem;
+    display: flex;
+    
+}
+
+.informacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.informacion h2 {
+    color: white;
+    font-size: 1rem;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
