@@ -34,6 +34,11 @@
                         <h2>{{ usuario.fechaNacimiento | date:'dd/MM/yyyy' }}</h2>
                         <h2>{{ usuario.direccion }}</h2>
                     </div>
+                    <div class="botonesMonitoreo">
+                        <i class="bi bi-pencil-square aa"></i>
+                        <i class="bi bi-trash aa" (click)="eliminar(usuario)"></i>
+                    </div>
+
                 </div>
             </div>
 

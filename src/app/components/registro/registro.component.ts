@@ -82,4 +82,11 @@ export class RegistroComponent {
       lector.readAsDataURL(archivo);
     }
   }
+
+  public eliminar(usuario:any) {
+    const userIndex = this.usuarios.indexOf(usuario);
+    if (userIndex !== -1) {
+      this.usuarios.splice(userIndex, 1);
+    }
+  }
 }

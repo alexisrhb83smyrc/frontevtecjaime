@@ -60,6 +60,7 @@
     width: 90%;
     height: 70%;
     background: #17364E;
+    padding: 10px;
 }
 
 .input {
@@ -126,7 +127,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
 }
 
 .informacion h2 {
@@ -140,4 +141,18 @@
 
 .mostrar {
     display: block;
+}
+
+
+.botonesMonitoreo {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+
+}
+
+.aa {
+    font-size: 1rem;
+    color: white;
 }
