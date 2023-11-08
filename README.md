@@ -1,12 +1,12 @@
 # Prueba técnica
 
 Se solicitó realizar un **CRUD** utilizando un Framework a elección del desarrollador. Dicho **CRUD** consiste en un contexto de una gestión de usuarios con los siguientes atributos:
-	- ID
-	- Nombre completo
-	- Fecha de nacimiento
-	- (Mediante la fecha de nacimiento, determinar la edad)
-	- Dirección fisica de vivienda. 
-	- Foto de perfil (Manejada en base64)
+	* ID
+	* Nombre completo
+	* Fecha de nacimiento
+	* (Mediante la fecha de nacimiento, determinar la edad)
+	* Dirección fisica de vivienda. 
+	* Foto de perfil (Manejada en base64)
 
 
 # Tecnologías seleccionadas
