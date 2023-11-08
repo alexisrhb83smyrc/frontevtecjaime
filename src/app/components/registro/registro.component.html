@@ -6,21 +6,41 @@
             <button (click)="irListar()"><i class="bi bi-list-columns-reverse"></i></button>
         </div>
         <div class="derecha" [ngClass]="{'ocultar': mostrarListar}">
-            <h1 class="texto2">Registro de usuario</h1>
-            <div class="contenedorForm">
-                <input type="text" placeholder="ID" class="input" [(ngModel)]="id"><br>
-                <input type="text" placeholder="Nombre completo" class="input nombre" [(ngModel)]="nombreCompleto">
-                <div class="conjuntos">
-                    <input type="text" placeholder="Dirección" class="input nombre" [(ngModel)]="direccion"> <br>
-                    <input type="date" class="input" [(ngModel)]="fechaNacimiento">
-                    <input type="file" class="input bsimg" [(ngModel)]="imagenBase64" (change)="cargarImagen($event)">
+            <div *ngIf="nuevoActivo">
+                <h1 class="texto2">Registro de usuario</h1>
+                <div class="contenedorForm">
+                    <input type="text" placeholder="ID" class="input" [(ngModel)]="id"><br>
+                    <input type="text" placeholder="Nombre completo" class="input nombre" [(ngModel)]="nombreCompleto">
+                    <div class="conjuntos">
+                        <input type="text" placeholder="Dirección" class="input nombre" [(ngModel)]="direccion"> <br>
+                        <input type="date" class="input" [(ngModel)]="fechaNacimiento">
+                        <input type="file" class="input bsimg" [(ngModel)]="imagenBase64"
+                            (change)="cargarImagen($event)">
 
+
+                    </div>
+                    <button class="registrar" (click)="registrarUsuario()">Confirmar</button>
 
                 </div>
-                <button class="registrar" (click)="registrarUsuario()">Confirmar</button>
-
             </div>
 
+            <div *ngIf="editarActivo">
+                <h1 class="texto2">Editar usuario</h1>
+                <div class="contenedorForm">
+                    <input type="text" placeholder="ID" class="input" [(ngModel)]="id" disabled><br>
+                    <input type="text" placeholder="Nombre completo" class="input nombre" [(ngModel)]="nombreCompleto">
+                    <div class="conjuntos">
+                        <input type="text" placeholder="Dirección" class="input nombre" [(ngModel)]="direccion"> <br>
+                        <input type="date" class="input" [(ngModel)]="fechaNacimiento">
+                        <input type="file" class="input bsimg" [(ngModel)]="imagenBase64"
+                            (change)="cargarImagen($event)">
+
+
+                    </div>
+                    <button class="registrar" (click)="guardar()">Confirmar</button>
+
+                </div>
+            </div>
         </div>
 
         <div class="derecha2" [ngClass]="{'ocultar': mostrarRegistro}">
@@ -35,7 +55,7 @@
                         <h2>{{ usuario.direccion }}</h2>
                     </div>
                     <div class="botonesMonitoreo">
-                        <i class="bi bi-pencil-square aa"></i>
+                        <i class="bi bi-pencil-square aa" (click)="editar(usuario)"></i>
                         <i class="bi bi-trash aa" (click)="eliminar(usuario)"></i>
                     </div>
 
@@ -43,5 +63,6 @@
             </div>
 
         </div>
+
     </div>
 </div>

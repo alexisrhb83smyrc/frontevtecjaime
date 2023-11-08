@@ -25,7 +25,7 @@ export class RegistroComponent {
       direccion: this.direccion,
       fechaNacimiento: this.fechaNacimiento,
       foto: this.imagenBase64,
-      edad: this.calcularEdad(this.fechaNacimiento)
+      edad: this.calcularEdad(this.fechaNacimiento),
     };
 
     this.usuarios.push(usuario);
@@ -83,10 +83,38 @@ export class RegistroComponent {
     }
   }
 
-  public eliminar(usuario:any) {
+  public eliminar(usuario: any) {
     const userIndex = this.usuarios.indexOf(usuario);
     if (userIndex !== -1) {
       this.usuarios.splice(userIndex, 1);
     }
   }
+  guardarCambios = false;
+  editarActivo = false;
+  nuevoActivo = true;
+  public editar(usuario: any) {
+    this.editarActivo = true;
+    this.nuevoActivo = false
+    this.irRegistro();
+    const indice = this.usuarios.indexOf(usuario);
+    
+
+    this.id = usuario.id;
+    this.nombreCompleto = usuario.nombreCompleto;
+    this.direccion = usuario.direccion;
+    this.fechaNacimiento = usuario.fechaNacimiento;
+    this.foto = usuario.foto;
+
+
+
+    if (this.guardarCambios) {
+      this.usuarios[indice].push(usuario);
+    }
+    
+  }
+  
+  public guardar() {
+    this.guardarCambios = true;
+  }
+  
 }
