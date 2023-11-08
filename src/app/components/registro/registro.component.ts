@@ -94,10 +94,9 @@ export class RegistroComponent {
   nuevoActivo = true;
   public editar(usuario: any) {
     this.editarActivo = true;
-    this.nuevoActivo = false
+    this.nuevoActivo = false;
     this.irRegistro();
     const indice = this.usuarios.indexOf(usuario);
-    
 
     this.id = usuario.id;
     this.nombreCompleto = usuario.nombreCompleto;
@@ -105,16 +104,11 @@ export class RegistroComponent {
     this.fechaNacimiento = usuario.fechaNacimiento;
     this.foto = usuario.foto;
 
-
-
-    if (this.guardarCambios) {
-      this.usuarios[indice].push(usuario);
-    }
+    const boton = document.getElementById('botoncito') as HTMLButtonElement;
     
+    boton.addEventListener('click', () => {
+      this.usuarios[indice].push(usuario);
+      
+    });
   }
-  
-  public guardar() {
-    this.guardarCambios = true;
-  }
-  
 }
