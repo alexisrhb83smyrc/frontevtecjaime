@@ -36,3 +36,5 @@ La parte del CRUD que más cuesta por lo general, se hizo la recuperación de da
 
 ## Evidencias
 A continuación, tenemos capturas de pantalla de la prueba técnica realizada:
+![Vista de registro](registro.PNG)
+![Vista de listado](listado.PNG)
