@@ -15,3 +15,15 @@ Para el estilo solamente opte por tonos azules, lamentablemente no pude recrear 
 
 #### Componentes
 Para obtener los datos de los inputs unicamente use el form module que nos brinda angular, de esta manera enlazamos los inputs, obtenemos datos y los guardamos en el arreglo. Bastante sencillo el proceso, no obstante se perdio mucho tiempo en el retraso comentado. 
+
+##### Registro de usuarios
+Solamente pedimos los datos con el form que nos da angular, lo mas sencillo de realizar. 
+
+##### Listado de usuarios
+Aca tuve que ser mas ingenioso, usar una simulacion de cambio de pestañas para manejar los datos con el mismo arreglo sin la necesidad de transportarlo ni convertirlo a JSON. Tambien investigue como converitr una imagen en base64 ya que nunca habia experimentado eso.
+
+##### Borrar
+Tambien muy sencillo, con respecto al indice recuperdao del ngfor, borramos el elemento con el boton correspondiente.
+
+##### Editar
+Quedo pendiente, recupero los datos, no obstante no me alcanzo el tiempo para terminar de hacer la actualizacion.
